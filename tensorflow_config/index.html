@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" />
+    <title class="pjax-title">环境配置-tensorflow - Hugo</title><meta name="Description" content="Hsh&#39;s blog"><meta property="og:title" content="环境配置-tensorflow" />
+<meta property="og:description" content="Windows下tensorflow的GPU环境配置" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://study777.gitee.io/tensorflow_config/" /><meta property="og:image" content="https://study777.gitee.io/images/avatar.webp"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-11-29T15:40:59&#43;08:00" />
+<meta property="article:modified_time" content="2021-11-29T15:40:59&#43;08:00" />
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://study777.gitee.io/images/avatar.webp"/>
+
+<meta name="twitter:title" content="环境配置-tensorflow"/>
+<meta name="twitter:description" content="Windows下tensorflow的GPU环境配置"/>
+<meta name="application-name" content="Hsh">
+<meta name="apple-mobile-web-app-title" content="Hsh">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" href="https://study777.gitee.io/tensorflow_config/" /><link rel="prev" href="https://study777.gitee.io/mlp/" /><link rel="next" href="https://study777.gitee.io/cuda_config/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/fontawesome-free/all.min.css">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "环境配置-tensorflow",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/study777.gitee.io\/tensorflow_config\/"
+        },"genre": "posts","wordcount":  908 ,
+        "url": "https:\/\/study777.gitee.io\/tensorflow_config\/","datePublished": "2021-11-29T15:40:59+08:00","dateModified": "2021-11-29T15:40:59+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Hsh"
+            },"description": ""
+    }
+    </script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {document.body.setAttribute('theme', theme);}
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Hugo">Hsh</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/series/"> 系列 </a><span class="menu-item delimiter"></span><a href="#" onclick="return false;" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" title="Select Language" id="language-select-desktop" onchange="location = this.value;"><option value="/tensorflow_config/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                    <select class="color-theme-select" id="theme-select-desktop" title="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Hugo">Hsh</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/series/" title="">系列</a><a href="#" onclick="return false;" class="menu-item theme-select" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+                <select class="color-theme-select" id="theme-select-mobile" title="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </a><a href="#" onclick="return false;" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" title="Select Language" onchange="location = this.value;"><option value="/tensorflow_config/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+            <div class="container"><div class="toc" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("pageStyle", "normal")</script><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single"><h1 class="single-title animate__animated animate__flipInX">环境配置-tensorflow</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><i class="author fas fa-user-circle fa-fw"></i><a href="/" title="Author" rel=" author" class="author">Hsh</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-series">系列 <a href="/series/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"><i class="far fa-list-alt fa-fw"></i>环境配置</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-11-29">2021-11-29</time>&nbsp;<i class="far fa-edit fa-fw"></i>&nbsp;<time datetime="2021-11-29">2021-11-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 908 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        data-src="/tensorflow_config/1_1.png"
+        data-srcset="/tensorflow_config/1_1.png, /tensorflow_config/1_1.png 1.5x, /tensorflow_config/1_1.png 2x"
+        data-sizes="auto"
+        alt="/tensorflow_config/1_1.png"
+        title="/tensorflow_config/1_1.png" height="710" width="1613"
+    /></div>
+                    
+                    
+                        
+                        <div class="details series-nav open">
+                            <div class="details-summary series-title">
+                                <span>系列 - 环境配置</span>
+                                <span><i class="details-icon fas fa-angle-right"></i></span>
+                            </div>
+                            <div class="details-content series-content">
+                                <nav>
+                                    <ul>
+                                        
+                                            
+                                                <li><a href="/hugo_config/">环境配置-hugo</a></li>
+                                            
+                                        
+                                            
+                                                <li><a href="/pytorch_config/">环境配置-pytorch</a></li>
+                                            
+                                        
+                                            
+                                                <li><a href="/cuda_config/">环境配置-cuda</a></li>
+                                            
+                                        
+                                            
+                                                <li><span class="active">环境配置-tensorflow</span></li>
+                                            
+                                        
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-本人配置">1 本人配置</a></li>
+    <li><a href="#2-安装tensorflow-gpu">2 安装tensorflow-gpu</a>
+      <ul>
+        <li><a href="#21-预先准备">2.1 预先准备</a></li>
+        <li><a href="#22-创建虚拟环境">2.2 创建虚拟环境</a></li>
+        <li><a href="#23-安装tensorflow-gpu">2.3 安装tensorflow-gpu</a></li>
+        <li><a href="#24-安装cuda和cudnn">2.4 安装cuda和cudnn</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-验证">3 验证</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Windows下tensorflow的GPU环境配置</p>
+<h2 id="1-本人配置">1 本人配置</h2>
+<p>以下是本人电脑配置:</p>
+<ul>
+<li>系统：Windows10</li>
+<li>CPU：AMD Ryzen 7 4800H</li>
+<li>显卡：GTX2060</li>
+</ul>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>一定要到<a href="https://developer.nvidia.com/cuda-gpus" target="_blank" rel="noopener noreffer">NVIDIA官网</a>查看你的显卡是否支持CUDA，如果不支持后面的步骤就不用看了（当然你能找到奇门办法也可以）。
+如下图Fig. 1.所示，我的GTX2060显卡支持CUDA且算力为7.5。</p>
+<figure><a class="lightgallery" href="/tensorflow_config/1_1.png" title="/tensorflow_config/1_1.png" data-thumbnail="/tensorflow_config/1_1.png" data-sub-html="<h2>Fig. 1. cuda-gpus</h2>">
+        <img
+            class="lazyload"
+            data-src="1_1.png"
+            data-srcset="/tensorflow_config/1_1.png, 1_1.png 1.5x, /tensorflow_config/1_1.png 2x"
+            data-sizes="auto"
+            alt="/tensorflow_config/1_1.png"height="320"width="640"
+        />
+    </a><figcaption class="image-caption">Fig. 1. cuda-gpus</figcaption>
+    </figure>
+</div>
+        </div>
+    </div>
+<h2 id="2-安装tensorflow-gpu">2 安装tensorflow-gpu</h2>
+<p>如果没安装Anaconda，需先安装<a href="https://www.anaconda.com/products/individual" target="_blank" rel="noopener noreffer">Anaconda</a>，如果速度过慢可以复制下载链接到迅雷下载，或者使用<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/?C=M&amp;O=D" target="_blank" rel="noopener noreffer">清华镜像</a>。</p>
+<h3 id="21-预先准备">2.1 预先准备</h3>
+<p>打开命令行输入<strong>nvidia-smi</strong>命令查看显卡驱动版本和CUDA版本，如下图Fig. 2.所示。</p>
+<figure><a class="lightgallery" href="/tensorflow_config/1_2.png" title="/tensorflow_config/1_2.png" data-thumbnail="/tensorflow_config/1_2.png" data-sub-html="<h2>Fig. 2. nvidia</h2>">
+        <img
+            class="lazyload"
+            data-src="1_2.png"
+            data-srcset="/tensorflow_config/1_2.png, 1_2.png 1.5x, /tensorflow_config/1_2.png 2x"
+            data-sizes="auto"
+            alt="/tensorflow_config/1_2.png"height="320"width="640"
+        />
+    </a><figcaption class="image-caption">Fig. 2. nvidia</figcaption>
+    </figure>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">这里的CUDA Version只是你目前对应的显卡驱动所支持的最高CUDA版本，意思后面你不能安装比这个版本高的CUDA。</div>
+        </div>
+    </div>
+<p>到<a href="https://www.tensorflow.org/install/source_windows#gpu" target="_blank" rel="noopener noreffer">tensorflow官网</a>查看所想安装的tensorflow-gpu与其对应的python、cuda和cudnn版本。
+由于本人安装的是tensorflow-gpu-2.3.0版本，所以后面就以这个版本为例，如下图Fig. 3.所示。</p>
+<figure><a class="lightgallery" href="/tensorflow_config/1_3.png" title="/tensorflow_config/1_3.png" data-thumbnail="/tensorflow_config/1_3.png" data-sub-html="<h2>Fig. 3. tensorflow-gpu-2.3.0</h2>">
+        <img
+            class="lazyload"
+            data-src="1_3.png"
+            data-srcset="/tensorflow_config/1_3.png, 1_3.png 1.5x, /tensorflow_config/1_3.png 2x"
+            data-sizes="auto"
+            alt="/tensorflow_config/1_3.png"height="320"width="640"
+        />
+    </a><figcaption class="image-caption">Fig. 3. tensorflow-gpu-2.3.0</figcaption>
+    </figure>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">由于tensorflow函数更新比pytorch大，所以选一个中间版本能稳定使用最好（如果后面要安装其它tensorflow版本，按部就班就行）。</div>
+        </div>
+    </div>
+<h3 id="22-创建虚拟环境">2.2 创建虚拟环境</h3>
+<p>tensorflow-gpu-2.3.0对应python版本区间为[3.5~3.8]，这里我选的3.7。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">conda create -n tf2 python=3.7  
+conda activate tf2              
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="23-安装tensorflow-gpu">2.3 安装tensorflow-gpu</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">pip install tensorflow
+</code></pre></td></tr></table>
+</div>
+</div><div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">由于tensorflow-2.1及以上版本CPU和GPU软件包已经合并，不需要指定为tensorflow-gpu。</div>
+        </div>
+    </div>
+<h3 id="24-安装cuda和cudnn">2.4 安装cuda和cudnn</h3>
+<p>对于tensorflow-gpu-2.3.0版本来说，CUDA和CUDNN对应版本分别为10.1和7.6。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">conda install cudatoolkit=10.1  
+conda install cudnn=7.6.5       
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="3-验证">3 验证</h2>
+<p>查看<a href="https://www.tensorflow.org/versions/r2.3/api_docs/python/tf/test/is_built_with_cuda" target="_blank" rel="noopener noreffer">tensorflow官网</a>api命令，在命令行下依次输入下面命令。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">python</span>
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="kn">as</span> <span class="nn">tf</span>
+<span class="n">tf</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">is_built_with_cuda</span><span class="p">()</span>
+<span class="n">tf</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">is_built_with_gpu_support</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>结果如下图Fig. 4.所示，就证明安装成功。</p>
+<figure><a class="lightgallery" href="/tensorflow_config/1_4.png" title="/tensorflow_config/1_4.png" data-thumbnail="/tensorflow_config/1_4.png" data-sub-html="<h2>Fig. 4. tensorflow-gpu test</h2>">
+        <img
+            class="lazyload"
+            data-src="1_4.png"
+            data-srcset="/tensorflow_config/1_4.png, 1_4.png 1.5x, /tensorflow_config/1_4.png 2x"
+            data-sizes="auto"
+            alt="/tensorflow_config/1_4.png"height="320"width="640"
+        />
+    </a><figcaption class="image-caption">Fig. 4. tensorflow-gpu test</figcaption>
+    </figure>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">由于前面已经执行过<strong>conda activate tf2</strong>命令，所以请确保你已经进入了tf2虚拟环境。</div>
+        </div>
+    </div></div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2021-11-29</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/tensorflow_config/index.md" target="_blank" rel="noopener noreferrer">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/mlp/" class="prev" rel="prev" title="tensorflow-mlp"><i class="fas fa-angle-left fa-fw"></i>tensorflow-mlp</a>
+            <a href="/cuda_config/" class="next" rel="next" title="环境配置-cuda">环境配置-cuda<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"></div></article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.81.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreffer" title="DoIt 0.2.13"><i class="far fa-edit fa-fw"></i> DoIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank" rel="noopener noreferrer">Hsh</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div></footer></div>
+
+    <div id="fixed-buttons"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <i class="fas fa-arrow-up fa-fw"></i>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <i class="fas fa-comment fa-fw"></i>
+        </a>
+    </div><div class="assets"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/fuse/fuse.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/topbar/topbar.min.js"></script><script type="text/javascript" src="/lib/pjax/pjax.min.js"></script><script type="text/javascript" src="/js/theme.min.js"></script></div>
+
+<div class="pjax-assets"><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":true,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.1,"type":"fuse","useExtendedSearch":false},"sharerjs":true};</script><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/lightgallery/lightgallery.min.css">
+    <noscript><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/katex.min.css">
+    <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/katex/copy-tex.min.css">
+    <noscript><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"></noscript></div>
+</body>
+
+</html>

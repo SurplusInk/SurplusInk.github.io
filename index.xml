@@ -1,0 +1,51 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Hugo</title>
+        <link>https://study777.gitee.io/</link>
+        <description>Hsh&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 30 Nov 2021 19:55:59 &#43;0800</lastBuildDate>
+            <atom:link href="https://study777.gitee.io/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>内存映射文件</title>
+    <link>https://study777.gitee.io/1/</link>
+    <pubDate>Tue, 30 Nov 2021 19:55:59 &#43;0800</pubDate><author>
+        <name>Hsh</name>
+    </author><guid>https://study777.gitee.io/1/</guid>
+    <description><![CDATA[<p>使用内存映射的方法读取大数据文件</p>]]></description>
+</item><item>
+    <title>环境配置-hugo</title>
+    <link>https://study777.gitee.io/hugo_config/</link>
+    <pubDate>Tue, 30 Nov 2021 19:48:59 &#43;0800</pubDate><author>
+        <name>Hsh</name>
+    </author><guid>https://study777.gitee.io/hugo_config/</guid>
+    <description><![CDATA[<p>使用Hugo部署静态网站到Gitee的流程</p>]]></description>
+</item><item>
+    <title>环境配置-pytorch</title>
+    <link>https://study777.gitee.io/pytorch_config/</link>
+    <pubDate>Mon, 29 Nov 2021 21:58:59 &#43;0800</pubDate><author>
+        <name>Hsh</name>
+    </author><guid>https://study777.gitee.io/pytorch_config/</guid>
+    <description><![CDATA[<p>Windows下pytorch的GPU环境配置</p>]]></description>
+</item><item>
+    <title>环境配置-cuda</title>
+    <link>https://study777.gitee.io/cuda_config/</link>
+    <pubDate>Mon, 29 Nov 2021 16:03:59 &#43;0800</pubDate><author>
+        <name>Hsh</name>
+    </author><guid>https://study777.gitee.io/cuda_config/</guid>
+    <description><![CDATA[<p>cuda和cudnn的安装</p>]]></description>
+</item><item>
+    <title>环境配置-tensorflow</title>
+    <link>https://study777.gitee.io/tensorflow_config/</link>
+    <pubDate>Mon, 29 Nov 2021 15:40:59 &#43;0800</pubDate><author>
+        <name>Hsh</name>
+    </author><guid>https://study777.gitee.io/tensorflow_config/</guid>
+    <description><![CDATA[<p>Windows下tensorflow的GPU环境配置</p>]]></description>
+</item><item>
+    <title>tensorflow-mlp</title>
+    <link>https://study777.gitee.io/mlp/</link>
+    <pubDate>Mon, 29 Nov 2021 13:48:49 &#43;0800</pubDate><author>
+        <name>Hsh</name>
+    </author><guid>https://study777.gitee.io/mlp/</guid>
+    <description><![CDATA[<p>hello mlp</p>]]></description>
+</item></channel>
+</rss>
