@@ -1,79 +1,79 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Hugo</title>
-        <link>https://study777.gitee.io/</link>
+        <link>https://SurplusInk.github.io/</link>
         <description>Hsh&#39;s blog</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 03 Dec 2021 21:53:59 &#43;0800</lastBuildDate>
-            <atom:link href="https://study777.gitee.io/index.xml" rel="self" type="application/rss+xml" />
+            <atom:link href="https://SurplusInk.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>分类问题-ResNet</title>
-    <link>https://study777.gitee.io/resnet/</link>
+    <link>https://SurplusInk.github.io/resnet/</link>
     <pubDate>Fri, 03 Dec 2021 21:53:59 &#43;0800</pubDate><author>
         <name>Hsh</name>
-    </author><guid>https://study777.gitee.io/resnet/</guid>
+    </author><guid>https://SurplusInk.github.io/resnet/</guid>
     <description><![CDATA[<p>等待更新！</p>]]></description>
 </item><item>
     <title>分类问题-VGG</title>
-    <link>https://study777.gitee.io/vgg/</link>
+    <link>https://SurplusInk.github.io/vgg/</link>
     <pubDate>Fri, 03 Dec 2021 21:51:59 &#43;0800</pubDate><author>
         <name>Hsh</name>
-    </author><guid>https://study777.gitee.io/vgg/</guid>
+    </author><guid>https://SurplusInk.github.io/vgg/</guid>
     <description><![CDATA[<p>等待更新！</p>]]></description>
 </item><item>
     <title>分类问题-AlexNet</title>
-    <link>https://study777.gitee.io/alexnet/</link>
+    <link>https://SurplusInk.github.io/alexnet/</link>
     <pubDate>Fri, 03 Dec 2021 21:50:59 &#43;0800</pubDate><author>
         <name>Hsh</name>
-    </author><guid>https://study777.gitee.io/alexnet/</guid>
+    </author><guid>https://SurplusInk.github.io/alexnet/</guid>
     <description><![CDATA[<p>等待更新！</p>]]></description>
 </item><item>
     <title>分类问题-LeNet</title>
-    <link>https://study777.gitee.io/lenet/</link>
+    <link>https://SurplusInk.github.io/lenet/</link>
     <pubDate>Fri, 03 Dec 2021 21:49:59 &#43;0800</pubDate><author>
         <name>Hsh</name>
-    </author><guid>https://study777.gitee.io/lenet/</guid>
+    </author><guid>https://SurplusInk.github.io/lenet/</guid>
     <description><![CDATA[<p>等待更新！</p>]]></description>
 </item><item>
     <title>分类问题-MLP</title>
-    <link>https://study777.gitee.io/mlp/</link>
+    <link>https://SurplusInk.github.io/mlp/</link>
     <pubDate>Fri, 03 Dec 2021 21:42:59 &#43;0800</pubDate><author>
         <name>Hsh</name>
-    </author><guid>https://study777.gitee.io/mlp/</guid>
+    </author><guid>https://SurplusInk.github.io/mlp/</guid>
     <description><![CDATA[<p>等待更新！</p>]]></description>
 </item><item>
     <title>DL-汇总</title>
-    <link>https://study777.gitee.io/outline/</link>
+    <link>https://SurplusInk.github.io/outline/</link>
     <pubDate>Fri, 03 Dec 2021 17:45:59 &#43;0800</pubDate><author>
         <name>Hsh</name>
-    </author><guid>https://study777.gitee.io/outline/</guid>
+    </author><guid>https://SurplusInk.github.io/outline/</guid>
     <description><![CDATA[<p>主要是目前我所学习到的方向，后续会持续更新。</p>]]></description>
 </item><item>
     <title>内存映射文件</title>
-    <link>https://study777.gitee.io/1/</link>
+    <link>https://SurplusInk.github.io/1/</link>
     <pubDate>Tue, 30 Nov 2021 19:55:59 &#43;0800</pubDate><author>
         <name>Hsh</name>
-    </author><guid>https://study777.gitee.io/1/</guid>
+    </author><guid>https://SurplusInk.github.io/1/</guid>
     <description><![CDATA[<p>使用内存映射的方法读取大数据文件</p>]]></description>
 </item><item>
     <title>环境配置-Hugo</title>
-    <link>https://study777.gitee.io/hugo_config/</link>
+    <link>https://SurplusInk.github.io/hugo_config/</link>
     <pubDate>Tue, 30 Nov 2021 19:48:59 &#43;0800</pubDate><author>
         <name>Hsh</name>
-    </author><guid>https://study777.gitee.io/hugo_config/</guid>
+    </author><guid>https://SurplusInk.github.io/hugo_config/</guid>
     <description><![CDATA[<p>使用Hugo部署静态网站到Gitee的流程</p>]]></description>
 </item><item>
     <title>环境配置-PyTorch</title>
-    <link>https://study777.gitee.io/pytorch_config/</link>
+    <link>https://SurplusInk.github.io/pytorch_config/</link>
     <pubDate>Mon, 29 Nov 2021 21:58:59 &#43;0800</pubDate><author>
         <name>Hsh</name>
-    </author><guid>https://study777.gitee.io/pytorch_config/</guid>
+    </author><guid>https://SurplusInk.github.io/pytorch_config/</guid>
     <description><![CDATA[<p>Windows下pytorch的GPU环境配置</p>]]></description>
 </item><item>
     <title>环境配置-CUDA</title>
-    <link>https://study777.gitee.io/cuda_config/</link>
+    <link>https://SurplusInk.github.io/cuda_config/</link>
     <pubDate>Mon, 29 Nov 2021 16:03:59 &#43;0800</pubDate><author>
         <name>Hsh</name>
-    </author><guid>https://study777.gitee.io/cuda_config/</guid>
+    </author><guid>https://SurplusInk.github.io/cuda_config/</guid>
     <description><![CDATA[<p>cuda和cudnn的安装</p>]]></description>
 </item></channel>
 </rss>
