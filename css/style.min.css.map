@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "style.min.css",
-	"sourceRoot": "D:/hugo_extended_0.89.4_Windows-64bit/my_website",
+	"sourceRoot": "E:/hugo_extended_0.89.4_Windows-64bit/my_website",
 	"sources": [
 		"assets/css/style.scss",
 		"assets/css/_variables.scss",

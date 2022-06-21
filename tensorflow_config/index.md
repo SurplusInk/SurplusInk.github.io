@@ -1,4 +1,4 @@
-# 环境配置-tensorflow
+# 环境配置-TensorFlow
 
 
 Windows下tensorflow的GPU环境配置

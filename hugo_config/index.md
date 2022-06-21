@@ -1,4 +1,4 @@
-# 环境配置-hugo
+# 环境配置-Hugo
 
 
 使用Hugo部署静态网站到Gitee的流程

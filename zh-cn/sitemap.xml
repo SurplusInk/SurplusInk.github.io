@@ -2,50 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://study777.gitee.io/tags/c&#43;&#43;/</loc><lastmod>2021-11-30T19:55:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://study777.gitee.io/</loc><lastmod>2021-11-30T19:55:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="en"
-                        href="https://study777.gitee.io/en/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="zh-cn"
-                    href="https://study777.gitee.io/"
-                    /></url><url>
-            <loc>https://study777.gitee.io/posts/</loc><lastmod>2021-11-30T19:55:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="en"
-                        href="https://study777.gitee.io/en/posts/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="zh-cn"
-                    href="https://study777.gitee.io/posts/"
-                    /></url><url>
-            <loc>https://study777.gitee.io/tags/</loc><lastmod>2021-11-30T19:55:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="en"
-                        href="https://study777.gitee.io/en/tags/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="zh-cn"
-                    href="https://study777.gitee.io/tags/"
-                    /></url><url>
-            <loc>https://study777.gitee.io/1/</loc><lastmod>2021-11-30T19:55:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://study777.gitee.io/series/</loc><lastmod>2021-11-30T19:48:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="en"
-                        href="https://study777.gitee.io/en/series/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="zh-cn"
-                    href="https://study777.gitee.io/series/"
-                    /></url><url>
-            <loc>https://study777.gitee.io/series/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc><lastmod>2021-11-30T19:48:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://study777.gitee.io/hugo_config/</loc><lastmod>2021-11-30T19:48:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://study777.gitee.io/pytorch_config/</loc><lastmod>2021-11-29T21:58:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://study777.gitee.io/cuda_config/</loc><lastmod>2021-11-29T16:03:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://study777.gitee.io/tensorflow_config/</loc><lastmod>2021-11-29T15:40:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://study777.gitee.io/categories/</loc><lastmod>2021-11-29T13:48:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://study777.gitee.io/categories/</loc><lastmod>2021-12-03T21:53:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="https://study777.gitee.io/en/categories/"
@@ -54,35 +11,49 @@
                     hreflang="zh-cn"
                     href="https://study777.gitee.io/categories/"
                     /></url><url>
-            <loc>https://study777.gitee.io/categories/deeplearning/</loc><lastmod>2021-11-29T13:48:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://study777.gitee.io/categories/dl/</loc><lastmod>2021-12-03T21:53:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://study777.gitee.io/</loc><lastmod>2021-12-03T21:53:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="https://study777.gitee.io/en/categories/deeplearning/"
+                        href="https://study777.gitee.io/en/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="https://study777.gitee.io/categories/deeplearning/"
+                    href="https://study777.gitee.io/"
                     /></url><url>
-            <loc>https://study777.gitee.io/tags/dl/</loc><lastmod>2021-11-29T13:48:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://study777.gitee.io/tags/python/</loc><lastmod>2021-11-29T13:48:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://study777.gitee.io/series/tensorflow/</loc><lastmod>2021-11-29T13:48:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://study777.gitee.io/posts/</loc><lastmod>2021-12-03T21:53:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://study777.gitee.io/series/</loc><lastmod>2021-12-03T21:53:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="https://study777.gitee.io/en/series/tensorflow/"
+                        href="https://study777.gitee.io/en/series/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="https://study777.gitee.io/series/tensorflow/"
+                    href="https://study777.gitee.io/series/"
                     /></url><url>
-            <loc>https://study777.gitee.io/mlp/</loc><lastmod>2021-11-29T13:48:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>https://study777.gitee.io/series/%E5%88%86%E7%B1%BB%E9%97%AE%E9%A2%98/</loc><lastmod>2021-12-03T21:53:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://study777.gitee.io/resnet/</loc><lastmod>2021-12-03T21:53:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://study777.gitee.io/vgg/</loc><lastmod>2021-12-03T21:51:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://study777.gitee.io/alexnet/</loc><lastmod>2021-12-03T21:50:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://study777.gitee.io/lenet/</loc><lastmod>2021-12-03T21:49:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://study777.gitee.io/mlp/</loc><lastmod>2021-12-03T21:42:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://study777.gitee.io/outline/</loc><lastmod>2021-12-03T17:45:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://study777.gitee.io/tags/c&#43;&#43;/</loc><lastmod>2021-11-30T19:55:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://study777.gitee.io/tags/</loc><lastmod>2021-11-30T19:55:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
-                        href="https://study777.gitee.io/en/mlp/"
+                        href="https://study777.gitee.io/en/tags/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="zh-cn"
-                    href="https://study777.gitee.io/mlp/"
+                    href="https://study777.gitee.io/tags/"
                     /></url><url>
+            <loc>https://study777.gitee.io/1/</loc><lastmod>2021-11-30T19:55:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://study777.gitee.io/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc><lastmod>2021-11-30T19:48:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://study777.gitee.io/hugo_config/</loc><lastmod>2021-11-30T19:48:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://study777.gitee.io/pytorch_config/</loc><lastmod>2021-11-29T21:58:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://study777.gitee.io/cuda_config/</loc><lastmod>2021-11-29T16:03:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://study777.gitee.io/tensorflow_config/</loc><lastmod>2021-11-29T15:40:59&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://study777.gitee.io/authors/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"

@@ -1,4 +1,4 @@
-# 环境配置-cuda
+# 环境配置-CUDA
 
 
 cuda和cudnn的安装

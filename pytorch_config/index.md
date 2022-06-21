@@ -1,4 +1,4 @@
-# 环境配置-pytorch
+# 环境配置-PyTorch
 
 
 Windows下pytorch的GPU环境配置
